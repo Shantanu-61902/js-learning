@@ -6,6 +6,7 @@ accountCity = "Jaipur"
 accountEmail="hc@hc.com"
 accountPassword="123"
 accountCity="Bengaluru"
-console.table([accountId,accountEmail,accountPassword,accountCity])
+let accountState
+console.table([accountId,accountEmail,accountPassword,accountCity,accountState])
 // accountId = 2
 console.log(accountId);
