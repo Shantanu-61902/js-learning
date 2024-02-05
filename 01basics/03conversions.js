@@ -9,6 +9,12 @@ console.log(valueInNumber);
 true => 1 
 false => 0
 */
-let isLoggedIn = 1
+let isLoggedIn = ""
 let booleanisLoggedIn = Boolean(isLoggedIn);
 console.log(booleanisLoggedIn);
+/*
+0=>fasle 
+1=>true
+""=>false
+"shanu or any value"=> true
+*/
