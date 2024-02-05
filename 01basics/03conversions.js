@@ -9,3 +9,6 @@ console.log(valueInNumber);
 true => 1 
 false => 0
 */
+let isLoggedIn = 1
+let booleanisLoggedIn = Boolean(isLoggedIn);
+console.log(booleanisLoggedIn);
