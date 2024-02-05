@@ -30,3 +30,23 @@ const myFunction = function(){
 console.log(myFunction);
 console.log(avengers);
 console.log(myobj);
+
+// STACK AND HEAP MEMORY
+let myYoutubename = "Shantanudotcom"
+let anotherName = myYoutubename
+console.log(anotherName);
+anotherName = "Chai aur Code"
+console.log(anotherName);
+let userOne = {
+    email: "shantanu@gmail.com",
+    upi:    "user@ybl"
+}
+console.log(userOne.email)
+let userTwo = userOne
+
+userTwo.email = "Dexterlab@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+console.log(userOne.email);
+console.log(userOne.upi);
