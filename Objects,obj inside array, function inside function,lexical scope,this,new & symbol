@@ -1,0 +1,150 @@
+// let obj = {
+//     name: "Shantanu",
+//     age: 21,
+//     "lname" :"JOHNCENA",
+//     show: function(){
+//         console.log("I am showing the value in the function");
+//     },
+//     arr:[50,20,40,70]
+// }
+
+// console.log(obj["lname"]); 
+// console.log(obj.show());
+// console.log(obj.arr);
+// console.log(obj);
+// for(let i in obj){
+//     console.log(i);
+// }
+// for(let i in obj){
+//     console.log(obj[i] );
+// }
+
+
+//********************************************** */ Objects Inside Arrays
+
+// let arr = [
+//     {user:1,name:"Shangchi"},
+//     {user:2,name:"Centry"},
+//     {user:3,name:"Blade"}
+// ]
+// console.log(arr);
+// console.log(arr[1]);
+// for(let i in arr){
+//     console.log(arr[i]);
+// }
+// for(let i of arr){
+//     console.log(i.name);
+// }
+// let [{name},item2] = arr;
+// console.log(name);
+// console.log(item2);
+
+//****************************************Function Inside a Function
+// function fun(){
+//     console.log("i am function1");
+//     function fun2(){
+//         console.log("i am function 2");
+//     }
+//     fun2();
+// }
+// fun();
+
+//*******************************Lexical Scope */
+// var a =4;
+// function fun(){
+//    // var a =1;
+//     console.log("Function: " +a);               //isme a ki value agr fun1()me jese a=2 hai to 2 ajayegi agr missing hai ya nahi  h to 1 ayegi or agar a define hi ni h to error, if globally declare a = 1 then both the function will get the value 1
+//     function fun1(){
+//        // var a = 2;
+//         console.log("this is a function babyy"+a);
+//     }
+//     fun1();
+// }
+// fun();
+
+//*******************************Debugger */
+
+// function fun(){
+//     debugger; 
+//     for(let i = 0;i<5;i++)
+//     {
+//         console.log(i);
+//     }
+// }
+// fun();
+
+//********************************Sets */
+// const arr=[1,2,3,4,5,6,7,8,9,10,2];// this can take duplicates values 
+// console.log(arr.length);
+// console.log(arr);
+// const s = new Set([1,23,34,65,85,95,95,32]); // set can't take the duplicate values
+// s.add("HELMIDEO")
+// console.log(s);
+
+//***********************************Maps */
+
+
+// var map1 = new Map([[1,"one"],["fname","mickey"],["wholeno",[0,1,2,3,4,5]]])
+// console.log(map1.get("wholeno"));
+// console.log((map1.get("fname")));
+// var k = map1.keys();
+// for(var key of k){
+//     console.log(key);
+// }
+// console.log(map1);
+
+// var map2 = new Map();
+// map2.set("fname","mouse")
+// console.log(map2);
+
+// //***************************** this */
+
+// var obj = {
+//     fname : "Dolly",
+//     age:23,
+//     fun:function(){
+//         console.log(this.fname);            // here this.fname means fname of this obj , if only this in console log ... it gives all values of the obj
+//     }
+// }
+// obj.fun();
+// function fun(){
+// console.log(this);
+// }
+// fun();
+
+
+// <><><><><><><><><><><><><><> New  ><><><><><><><><><><><><><>
+
+// function fun(){
+//     let fname = "Shanu";
+//     this.fname = fname;
+// }
+// var obj = new fun();
+// console.log(obj.fname);
+
+//************************Constructor Function
+//they should be used with new operator
+// first letter should be capital
+
+// function User(name){
+//     this.name = name;
+// }
+// let person = new User("GAME");
+// console.log(person.name);
+
+
+//***************************Symbol */    //symbols are unique
+// let sym = Symbol("id");
+// let sym1 = Symbol("id")
+// console.log(sym.toString());
+// console.log(sym.description);
+// let id = Symbol("id");
+// let obj = {
+//     name:"Johnny",
+//     [id]:1
+// }
+// obj[id]=3;
+// console.log(obj[id]);
+// for(let key in obj){
+//     console.log(key);// it shows that Symbol is a hidden property
+// }
