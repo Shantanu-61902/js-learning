@@ -1,0 +1,40 @@
+const user = {
+    username : "Shantnau Mishra",
+    password : 3,
+    signedIn : true,
+
+    getUserDetails : function(){
+       // console.log("Got the details of the user");
+       //console.log(`USER_NAME: ${this.username}`);
+       console.log(this);
+    }
+}
+///console.log(user.getUserDetails);
+//console.log(user);
+//console.log(user.username);
+///console.log(this);
+
+
+//const promiseOne = new Promise()   //new constructor function
+//const date = new Date()
+
+function User(username,logincount, isloggedin){
+     this.username = username;
+     this.isloggedin = isloggedin;
+     this.logincount = logincount;
+     this.greeting = function(){
+        console.log(`WELCOME ${this.username}`);
+     }
+     return this
+}
+
+const userOne = new User("Shanu",4,true)
+const userTwo = new User("Darling",24,false)
+console.log(userOne.constructor);
+console.log(userTwo);
+
+                                            //----- new -> whenever new is created an empty OBJECT INSTANCE IS CREATED  
+
+
+
+
