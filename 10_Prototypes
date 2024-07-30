@@ -1,0 +1,63 @@
+// 
+
+let myHeros = ["thor","deadpool","wolverine"]
+
+let heroPower = {
+    thor: "hammer",
+    deadpool: "MIni Knife",
+    wolverine: "Claws",
+
+    getDeadpoolPower: function(){
+        console.log(`The Power Of Deadpool is:${this.deadpool}`);
+    }
+}
+
+Array.prototype.heyShantanu = function(){
+    console.log("helloo from shantanu");
+}
+Object.prototype.shantanu = function(){
+    console.log("Shantnau is present in ALL OBJECTS");
+}
+//myHeros.shantanu()
+//myHeros.heyShantanu()
+//heroPower.heyShantanu()
+const User = {
+    name:"Shantanu",
+    email: "shan56@gmail.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable:false
+}
+
+const TAsupport = {
+
+    makeAssign: 'JS Assignment',
+    fullTime: true,
+    __proto__ : TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+//Modern Synta
+
+
+Object.setPrototypeOf(TeachingSupport,Teacher)
+
+let anotherUsername = "chaiaurcodesss        "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    console.log(`${this.name}`);
+    console.log(`True length is:${this.trim().length}`);
+}
+
+anotherUsername.trueLength()
+
+"BCCI".trueLength()
+"ShantanuMishra".trueLength()
+"SetterandGetters".trueLength()
