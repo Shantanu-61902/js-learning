@@ -1,0 +1,25 @@
+class User {
+    constructor(username){
+        this.username = username
+    }
+
+
+    logMe(){
+        console.log(`UserName : ${this.username}`);
+    }
+
+    createId(){
+        return '1234'
+    }
+}
+///const shan = new User("Shantanu")
+//console.log(shan.createId());
+
+class Teacher extends User{
+    constructor(username,email){
+       super(username)
+        this.email = email
+    }
+}
+const phone = new Teacher("LAVA","abc@gmail.com")
+phone.logMe()
