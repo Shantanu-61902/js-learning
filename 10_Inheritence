@@ -1,0 +1,32 @@
+class User {
+    constructor(username) {
+        this.username = username
+    }
+
+
+LogMe(){
+    console.log(`USERNAME ${this.username}`);
+}
+
+}
+
+class Teacher extends User{
+    constructor(username,email,password){
+       super(username)
+        this.email = email;
+        this.password = password;
+    }
+
+    addCourses(){
+        console.log(`New Course added by ${this.username}`);
+    }
+}
+
+const show = new Teacher("Shantanu Mishra","chai@12",12)
+show.addCourses()
+show.LogMe()
+
+const print = new User("RICKY PONTING")
+print.LogMe()
+
+console.log( show === print);
