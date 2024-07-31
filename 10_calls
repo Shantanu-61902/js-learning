@@ -1,0 +1,15 @@
+function SetUserName(username){
+
+    this.username = username
+    console.log("CALLED");
+}
+
+function createUser(username,email,password){
+    SetUserName.call(this,username)         //this is to be placed before username to call the above function.. without this we cannot add username in the output
+
+    this.email = email
+    this.password= password
+}
+
+const Chai = new createUser("Shantanu","X351QD@cmd.com","123")
+console.log(Chai);
